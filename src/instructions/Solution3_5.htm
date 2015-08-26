@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+<title>Solution 3.5 - Deadlock in multi-party operations.</title>
+
+<link rel="stylesheet" type="text/css" href="../../../../m362.css">
+
+</head>
+
+<body>
+<h1>Solution 3.5 - Deadlock in multi-party operations.</h1>
+<h2>Discussion</h2>
+
+<p>In this activity (and some of the other activities in this unit) we have had
+to add some delaying <code>workABit</code> or <code>Thread.sleep</code> methods, in 
+order to force the system to experience deadlock or some other problem. Without 
+these time-delays the
+methods, like <code>swapColour</code>, would be executed so fast that the problem of two threads trying to grab
+each other's locks could not occur. Thread 1 would have finished its execution
+of <code>swapColour</code>, long before the next thread had even started
+running.     </p>
+
+<p>While writing and testing these activities we have used a certain machine,
+but the exact conditions for all the other machines on which these activities
+will have to run cannot be known. This is why you were asked to tweak calls to 
+these delaying methods occasionally, in order to make sure you did see the deadlock. On some
+machines the deadlock will show, and on others it won't. </p>
+
+<p>The fact that we had to insert these delaying methods is in itself an
+interesting example of the race conditions we discussed throughout this unit. It
+is also an example of how concurrent programs are so difficult to get right: the
+deadlock would not have shown up, if we hadn't bothered with the time delay!
+Remember that in the problem of the <em>Northeast black out</em> at the
+beginning of this unit, a bug occurred which had not shown up before, even
+though the system had been operational for over three million hours. </p>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Activity 3.5 - Deadlock in multi-party operations.</title>
+
+<link rel="stylesheet" type="text/css" href="../../../../m362.css">
+</head>
+
+<body>
+<h1>Activity 3.5 - Deadlock in multi-party operations.</h1>
+
+<h2>Purpose </h2>
+
+<p>The purpose of this activity is:</p>
+<ul>
+<li> to study the deadlock problems that can arise
+in synchronised methods that need to access several objects.</li>
+</ul>
+
+<h2>Materials </h2>
+<p>We have provided a project which has four classes: 
+<ul>	<li><code>Square</code> - which has a data field <code>colour</code>
+    and a method <code>swapColour</code> so that two squares can swap their
+    colours.</li>
+<li><code>SquareThread</code> - extends the <code>Thread</code> 
+  class, with a single method <code>run</code>.
+</li>
+<li><code>Main</code> - has a <code>main</code> method to create
+  threads and to set them running.</li>
+<li><code>StateReporter</code> - to report on the state of a given thread.</li>
+</ul>
+
+<h2>Task </h2>
+<p>In this activity you are not required to do any programming, but simply to observe
+how the threads get into a state of deadlock.</p>
+
+<h3>Instructions </h3>
+<ol>
+	<li><p>Study class <code>Square</code> and note that it is as discussed in the unit, with
+      one difference: we added a private method <code>workABit</code>. This method is called from 
+	<code>getColour</code>.
+    </p></li>
+	<li><p>Be aware that if you start to run this project, there is a good chance
+      that the program will experience deadlock. In that case the program does not
+      come to a halt because the threads will stay in the <code>BLOCKED </code>state. If your program
+      gets stuck in deadlock, you
+      will have to terminate the process yourself by selecting <strong>Run|Stop Build/Run:</strong> or
+      by clicking on the close icon next to the run status information at the bottom right of the 
+      NetBeans IDE.</p></li>
+ </ol>
+ <h3>Notes </h3>
+ 
+      <p>If your program does not experience deadlock, you can change the value for the call to 
+		<code>workABit</code>.  </p>
+
+</body>
+</html>
